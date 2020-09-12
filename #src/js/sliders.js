@@ -1,21 +1,48 @@
 //SLIDERS
-if($('.mainslider').length>0){
-	$('.mainslider').slick({
-		//autoplay: true,
+if ($('.wrapper-hero__sliders').length > 0) {
+	$('.wrapper-hero__sliders').slick({
 		//infinite: false,
-		dots: true,
-		arrows: false,
-		accessibility:false,
-		slidesToShow:1,
+		autoplay: false,
+		dots: false,
+		arrows: true,
+		slidesToShow: 1,
 		autoplaySpeed: 3000,
-		//asNavFor:'',
-		//appendDots:
-		//appendArrows:$('.mainslider-arrows .container'),
-		nextArrow:'<button type="button" class="slick-next"></button>',
-		prevArrow:'<button type="button" class="slick-prev"></button>',
 		responsive: [{
-			breakpoint: 768,
-			settings: {}
+			breakpoint: 479.98,
+			settings: {
+				arrows: false
+			}
+		}]
+	});
+}
+if ($('.wrapper-products__sliders').length > 0) {
+	$('.wrapper-products__sliders').slick({
+		//infinite: false,
+		autoplay: false,
+		infinite: false,
+		dots: false,
+		arrows: true,
+		slidesToShow: 5,
+		slidesToScroll: 3,
+		autoplaySpeed: 3000,
+		responsive: [{
+			breakpoint: 1182,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1,
+			}
+		}, {
+			breakpoint: 767.98,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+			}
+		}, {
+			breakpoint: 620,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			}
 		}]
 	});
 }
@@ -43,7 +70,7 @@ if($('.reviews-object__items').length>0){
 			},{
 				breakpoint: 768,
 				settings: {
-					
+
 				}
 			}]
 		});
@@ -113,7 +140,7 @@ if($('.newsmodule-slider').length>0){
 		$('.newsmodule-slider').slick('goTo',$(this).index());
 	});
 	$('.newsmodule-navigator-info span').eq(1).html($('.newsmodule-items-item').length);
-	
+
 	$('.newsmodule-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 		$('.newsmodule-navigator-info span').eq(0).html(nextSlide+1);
 	});

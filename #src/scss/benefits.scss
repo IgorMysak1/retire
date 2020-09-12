@@ -1,0 +1,109 @@
+.benefits {
+    height: 100%;
+    width: 100%;
+    bottom: #ffffff;
+    padding: 40px 0;
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+    }
+}
+.wrapper-benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 37px;
+        text-align: center;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #0a264e;
+        padding-bottom: 20px;
+    }
+
+    &__body {
+    }
+    @media (max-width: $md4+px) {
+        &__title {
+            font-size: 22px;
+        }
+    }
+}
+.body-benefits {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    &__item {
+        margin-right: 20px;
+    }
+    &__item:last-child {
+        margin-right: 0;
+    }
+    @media (max-width: $md3+px) {
+        & {
+            align-items: center;
+            flex-direction: column;
+        }
+        &__item {
+            margin-right: 0;
+        }
+    }
+}
+.item-benefits {
+    width: 33.333%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    &__img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img img {
+        width: 100%;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 150%;
+        text-align: center;
+        color: #114b9d;
+        padding: 15px 0;
+    }
+
+    &__info {
+        width: 80%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 150%;
+        text-align: center;
+        color: #0a264e;
+    }
+    @media (max-width: $md2+px) {
+        &__title {
+            font-size: 14px;
+        }
+        &__info {
+            width: 100%;
+        }
+    }
+    @media (max-width: $md3+px) {
+        & {
+            width: 70%;
+        }
+    }
+    @media (max-width: $md4+px) {
+        & {
+            width: 100%;
+        }
+    }
+}
