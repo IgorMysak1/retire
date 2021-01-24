@@ -60,6 +60,8 @@
         font-size: 24px;
         line-height: 28px;
         color: #dee5f1;
+        transition: 0.7s;
+
     }
     @media (max-width: $md3+px) {
         & {
@@ -78,7 +80,15 @@
             width: 70%;
         }
     }
+    @media (min-width:$md3+px){
+        &__go:hover{
+            cursor: pointer;
+            transform: rotate(360deg);
+            transition: 0.7s;
+        }
+    }
 }
+
 .text-zip {
     display: flex;
     justify-content: center;

@@ -2,6 +2,7 @@
     height: 100%;
     width: 100%;
     background: #ffffff;
+    padding-top: 30px;
     &__warpper {
         height: 100%;
         width: 100%;
@@ -37,7 +38,6 @@
     align-items: center;
     flex-direction: column;
     background: url(../img/help/bg.png) center/cover no-repeat;
-    padding: 20px 0;
     &__title {
         width: 80%;
         padding-bottom: 30px;
@@ -53,10 +53,14 @@
 
     &__accordion {
     }
+    @media (max-width: $md2+px) {
+        & {
+            width: 100%;
+        }
+    }
     @media (max-width: $md3+px) {
         & {
             min-height: 440px;
-            width: 70%;
         }
     }
     @media (max-width: $md4+px) {
@@ -179,14 +183,21 @@
         color: #d12f13;
         margin-top: 30px;
         cursor: pointer;
+        transition: 0.7s ease;
     }
-    @media (max-width: $md3+px) {
+    @media (min-width: $md3+px){
+        &__btn:hover {
+            transform: scale(1.08);
+            transition: 0.7s ease;
+        }
+    }
+    @media (max-width: $md2+px) {
         & {
-            width: 70%;
-            padding: 20px 0;
+            width: 100%;
+            padding: 20px 10px 0;
         }
         &__btn {
-            margin: 30px auto 0;
+            margin: 10px auto 0;
         }
     }
     @media (max-width: $md4+px) {
@@ -220,6 +231,7 @@
             line-height: 21px;
             color: #0a264e;
             padding-bottom: 10px;
+            opacity: 0.5;
         }
         img {
             position: absolute;
@@ -231,5 +243,102 @@
             font-size: 20px;
             border-bottom: 1px solid #0a264e;
         }
+    }
+}
+.wrapper-footer{
+    &__btn{
+        margin: 15px 0;
+    }
+}
+.item{
+    &__name{
+        &.help-green{
+            border-bottom: 4px solid green;
+        }
+        &.help-red{
+            border-bottom: 4px solid red;
+        }
+    }
+    &__email{
+        &.help-green{
+            border-bottom: 4px solid green;
+        }
+        &.help-red{
+            border-bottom: 4px solid red;
+        }
+
+    }
+    &__message{
+        &.help-green{
+            border-bottom: 4px solid green;
+        }
+        &.help-red{
+            border-bottom: 4px solid red;
+        }
+
+    }
+}
+.help-popup{
+    position: fixed;
+    top: -1000px;
+    left: 35%;
+    height: 130px;
+    width: 400px;
+    margin: 0 auto;
+    background: #cecccc;
+    z-index: 30;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 0.4s ease;
+    &.active{
+        top: 70px;
+        transition: 0.4s ease;
+    }
+    img{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 15px;
+        width: 15px;
+        cursor: pointer;
+    }
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #0a264e;
+    }
+    &__choice{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        div{
+            width: 65px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: #0a264e;
+            padding: 5px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+    &__agree {
+        background: #e3e4e4;
+        margin-right: 5px;
+    }
+
+    &__disagree {
+        background: #e58383;
     }
 }

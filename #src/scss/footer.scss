@@ -109,12 +109,7 @@
 }
 .hero-slide {
     &__btn {
-    }
-    @media (max-width: $md3+px) {
-        &__btn {
-            margin: 0 auto;
-        }
-    }
+    }   
 }
 .content-top {
     &__number {

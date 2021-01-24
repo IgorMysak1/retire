@@ -23,6 +23,9 @@
             align-items: center;
             flex-direction: column;
         }
+        &__item {
+            margin-right: 0;
+        }
     }
 }
 .item-number {
@@ -48,7 +51,7 @@
         display: flex;
         align-items: flex-end;
         text-align: center;
-        color: #b82d16;
+        color: #ffffff;
         margin-left: 10px;
     }
 

@@ -293,3 +293,10 @@ function tip() {
 		$(this).toggleClass('active');
 	});
 }
+window.addEventListener('scroll' , function(){
+	if(scrollY > 60){
+			document.querySelector('.bottom-header').classList.add('active');
+	}else{
+		document.querySelector('.bottom-header').classList.remove('active');
+	}
+});

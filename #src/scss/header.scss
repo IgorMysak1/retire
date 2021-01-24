@@ -3,8 +3,8 @@
    .icon-menu {
       display: block;
       position: absolute;
-      top: 11px;
-      right: 20px;
+      top: 5px;
+      right: 10px;
       width: 40px;
       height: 40px;
       cursor: pointer;
@@ -137,7 +137,7 @@
 }
 .content-top {
    display: flex;
-   justify-content: flex-end;
+   justify-content: space-around;
    align-items: center;
    &__mb {
       display: none;
@@ -161,7 +161,13 @@
       }
    }
    &__call {
-      padding-right: 20px;
+      padding: 10px 20px;
+      box-shadow: 0px 7px 5px rgba(11, 78, 165, 0.2);
+      color: #0a264e;
+      transition: 0.7s ease;
+      border-radius: 8px;
+      margin-right: 10px;
+      cursor: pointer;
       a {
          font-style: normal;
          font-weight: bold;
@@ -172,6 +178,13 @@
             &:hover {
                color: rgba(10, 38, 78, 0.75);
             }
+         }
+      }
+      @media (min-width: $md3+px) {
+         &:hover {
+            box-shadow: 0px 0px 5px rgba(11, 78, 165, 0.2);
+            color: #0c528f;
+            transition: 0.7s ease;
          }
       }
    }
@@ -185,6 +198,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 8px;
       a {
          font-style: normal;
          font-weight: bold;
@@ -224,8 +238,6 @@
    }
 
    &__btn {
-      height: 40px;
-      width: 188px;
       background: #ffffff;
       font-style: normal;
       font-weight: bold;
@@ -236,14 +248,16 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      transition: 0.5s;
+      padding: 10px 20px;
       margin-left: 10px;
+      box-shadow: 0px 7px 5px rgba(11, 78, 165, 0.2);
+      color: #0a264e;
+      transition: 0.7s ease;
       @media (min-width: $md3+px) {
          &:hover {
-            box-shadow: 0px 3px 5px rgba(11, 78, 165, 0.2);
-            border: 3px solid #d92f13;
-            color: #d92f13;
-            transition: 0.5s;
+            box-shadow: 0px 0px 5px rgba(11, 78, 165, 0.2);
+            color: #0c528f;
+            transition: 0.7s ease;
          }
       }
    }
@@ -254,18 +268,24 @@
    }
 }
 .bottom-header {
-   height: 100%;
+   height: 80px;
    width: 100%;
    display: flex;
    justify-content: space-between;
    align-items: center;
    background: #0c528f;
    padding: 10px 0;
+   &.active{
+      position: fixed;
+   z-index: 20;
+   top: 0;
+   }
    &__wrapeer {
    }
    @media (max-width: $md3+px) {
       & {
-         padding: 15px 0;
+         height: 45px;
+         padding-top: 15px;
          background: #ffffff;
       }
    }
@@ -304,15 +324,15 @@
       text-transform: uppercase;
       color: #ffffff;
       margin: 0 20px;
-      transition: 0.7s;
+      transition: 0.5s ease;
       &:last-child {
          margin: 0 20px 0 0;
-         transition: 0.7s;
+
       }
       @media (min-width: $md3+px) {
          &:hover {
-            border-bottom: 2px solid #aa2c17;
-            transition: 0.7s;
+            color: #ed4444;
+            transition: 0.5s ease;
          }
       }
    }
@@ -334,7 +354,7 @@
       &__logo {
          font-style: normal;
          font-weight: 900;
-         font-size: 24px;
+         font-size: 28px;
          text-transform: uppercase;
          color: #000000;
       }
@@ -344,6 +364,9 @@
       &__nav a {
          margin: 0;
          font-size: 25px;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
       }
       &__nav {
          justify-content: space-between;
